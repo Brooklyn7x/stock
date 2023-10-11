@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+
+.market-container {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 20px;
+    background-color: rgba(206, 206, 206, 0.291);
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table th, table td {
+    border: 2px solid #ddd;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+th {
+    background-color: #FFA500; 
+    font-weight: bold;
+    color: #000000;
+}
+
+tbody tr:hover {
+    background-color: #51ff00; 
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background:  #000000; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+button:hover{
+    background-color: #f11810; 
+}
+
+
+.positive-change {
+    color: #27ae60; 
+    font-weight: bold;
+}
+
+.negative-change {
+    color: #e74c3c; 
+    font-weight: bold;
 }
