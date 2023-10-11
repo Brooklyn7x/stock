@@ -1,16 +1,15 @@
-// Market.js
-
 import React, { useState, useEffect } from "react";
-
-const apiUrl =
-  "https://f68370a9-1a80-4b78-b83c-8cb61539ecd6.mock.pstmn.io/api/v1/get_market_data/";
-const stockSymbol = "AAPL";
 
 const Market = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [currData, setCurrData] = useState([]);
   const [prevClosingPrice, setPrevClosingPrice] = useState(null);
+
+  const apiUrl =
+    "https://f68370a9-1a80-4b78-b83c-8cb61539ecd6.mock.pstmn.io/api/v1/get_market_data/";
+
+  const sign = "AAPL";
 
   const fetchData = async () => {
     try {
@@ -19,7 +18,6 @@ const Market = () => {
         const json = await res.json();
         setData(json.data);
 
-        // Set the previous day's closing price after fetching data
         if (json.data.length > 1) {
           setPrevClosingPrice(json.data[json.data.length - 2].close);
         }
@@ -40,7 +38,6 @@ const Market = () => {
     return array.slice(startIndex, endIndex);
   }
 
-  
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString();
@@ -69,7 +66,7 @@ const Market = () => {
 
   return (
     <div className="market-container">
-      <h1>Market Data for {stockSymbol}</h1>
+      <h1>Market Data for {sign}</h1>
       <table>
         <thead>
           <tr>
